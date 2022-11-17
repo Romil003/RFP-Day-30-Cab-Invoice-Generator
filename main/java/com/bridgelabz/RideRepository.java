@@ -9,10 +9,6 @@ public class RideRepository {
     public RideRepository() {
     }
 
-    public RideRepository(HashMap<Integer, Ride[]> rideHashMap) {
-        this.rideHashMap = rideHashMap;
-    }
-
     public void addRides(Integer userId, Ride[] ride1) {
         if(rideHashMap.containsKey(userId)){
             System.out.println("Already Exist !!!");

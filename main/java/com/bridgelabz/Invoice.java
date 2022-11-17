@@ -8,6 +8,7 @@ public class Invoice {
     double aggregateTotalFare;
     double averageFare;
 
+
     public Invoice(int totalNumberOfRides, double aggregateTotalFare, double averageFare) {
         this.totalNumberOfRides = totalNumberOfRides;
         this.aggregateTotalFare = aggregateTotalFare;
