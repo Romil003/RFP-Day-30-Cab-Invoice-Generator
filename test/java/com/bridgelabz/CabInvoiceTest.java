@@ -36,4 +36,19 @@ public class CabInvoiceTest {
         Invoice actualInvoice = cabInvoice.generateInvoice(rides);
         Assertions.assertEquals(expectedInvoice,actualInvoice);
     }
+
+    @Test
+    public void givenUserId_ShouldReturnInvoice(){
+        RideRepository rideRepository = new RideRepository();
+        Ride[] ride1 = {new Ride(10.0,4.0),new Ride(12.0,5.0),new Ride(0.1,1.0)};
+        Ride[] ride2 = {new Ride(12.0,3.0),new Ride(14.0,5.0),new Ride(0.1,3.0)};
+        rideRepository.addRides(1,ride1);
+        rideRepository.addRides(2,ride2);
+        Invoice expectedInvoice1 = new Invoice(3,234.0,78.0);
+        Invoice expectedInvoice2 = new Invoice(3,273.0,91.0);
+        Invoice actualInvoice1 = rideRepository.getInvoiceFromUserId(1);
+        Invoice actualInvoice2 = rideRepository.getInvoiceFromUserId(2);
+        Assertions.assertEquals(expectedInvoice1,actualInvoice1);
+        Assertions.assertEquals(expectedInvoice2,actualInvoice2);
+    }
 }
