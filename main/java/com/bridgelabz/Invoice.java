@@ -6,7 +6,7 @@ public class Invoice {
 
     int totalNumberOfRides;
     double aggregateTotalFare;
-    double averageFare;
+    double averageFare ;
 
 
     public Invoice(int totalNumberOfRides, double aggregateTotalFare, double averageFare) {
