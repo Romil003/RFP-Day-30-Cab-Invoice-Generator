@@ -15,4 +15,5 @@ public class Ride {
         this.time = time;
         this.type = type;
     }
+
 }

@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Invoice {
 
-    int totalNumberOfRides;
-    double aggregateTotalFare;
+    int totalNumberOfRides ;
+    double aggregateTotalFare ;
     double averageFare ;
 
 

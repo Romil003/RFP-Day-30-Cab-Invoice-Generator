@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 public class RideRepository {
 
-    HashMap<Integer,Ride[]> rideHashMap = new HashMap<>() ;
+    HashMap<Integer,Ride[]> rideHashMap = new HashMap<>();
 
     public RideRepository() {
     }

@@ -55,9 +55,9 @@ public class CabInvoiceTest {
     @Test
     public void givenUserIdAndHavingTypeOfRides_ShouldReturnInvoice(){
         RideRepository rideRepository = new RideRepository();
-        Ride[] ride1 = {new Ride(3.6,15.0,"Normal"),new Ride(0.2,1.0,"Premium")};
+        Ride[] ride1 = {new Ride(12,3,"Normal"),new Ride(13.4,4.0,"Premium"),new Ride(17,8,"Premium")};
         rideRepository.addRides(1,ride1);
-        Invoice expectedInvoice1 = new Invoice(2,71.0,35.5);
+        Invoice expectedInvoice1 = new Invoice(3,603,201);
         Invoice actualInvoice1 = rideRepository.getInvoiceFromUserId(1);
         Assertions.assertEquals(expectedInvoice1,actualInvoice1);
     }
